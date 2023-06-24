@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Reservation System</title>
+    <link rel="stylesheet" href="../PagesDesigns1.css">
+    <link rel="stylesheet" href="profilePage_style.css">
+    <style>
+        #contentBody{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 20px;
+        }
+        #Container{
+            width: 90%;
+            height: 90%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px #7C7777;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0px 0px 50px;
+        }
+        #Container #ContianerCOntent {
+            width: 95%;
+            height: 95%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            row-gap: 20px;
+        }
+        #Container #ContianerCOntent #temp {
+            width: 100%;
+            height: 8%;
+            display: flex;
+            margin-bottom: 30px;
+        }
+        #Container #ContianerCOntent #temp span{
+            width: 30%;
+            height: 95%;
+            box-shadow: 1px 1px 5px black;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+        #Container #ContianerCOntent #inputDataContainer {
+            width: 60%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+        #getOTP_Btn {
+            width: 90px; 
+            height: 30px;
+            background-color: #443333;
+            color: white;
+            transition: all 0.2s;
+        }
+        #getOTP_Btn:hover {
+            width: 110px; 
+            height: 30px;
+            background-color: #443333;
+            color: white;
+        }
+
+        .detailsBoxStyle2 {
+            width: 90%;
+        }
+        #controlButtonsConatainer {
+            width: 80%;
+        }
+        #controlButtonsConatainer button{
+            width: 25%;
+            background-color: #D02B2B;
+            box-shadow: 1px 1px 5px black;
+            transition: all 0.2s;
+        }
+        #controlButtonsConatainer button:hover{
+            width: 30%;
+            cursor:grab;
+            background-color: #D02B2B;
+            box-shadow: 1px 1px 5px black;
+            transition: all 0.2s;
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <form action="">
+        <div id="MainContainer">
+            <!-- ##################### Navigation Details #####################-->
+            <div id="navigationBar">
+                <div id="dashboardContainer" class="navigationBarStyle"><a href="../DashBoard.html"><img src="/icons/dashboard.png" alt="">Dashboard</a></div>
+                <div id="searchflightContainer" class="navigationBarStyle"><a href="../SearchFlight.html"><img src="/icons/flight.png" alt="">Search Flight</a></div>
+                <div id="ticketsContainer" class="navigationBarStyle"><a href="../FlightTickets.html"><img src="/icons/ticket.png" alt="">Flight Tickets</a></div>
+                <div id="trackflightContainer" class="navigationBarStyle"><a href="../trackflightPage.html"><img src="/icons/track.png" alt="">Track FLight</a></div>
+                <div id="profileContainer" class="navigationBarStyle"><a href="userDetails.html"><img src="/icons/user.png" alt="">Profile</a></div>
+            </div>
+            <!-- ##################### Main Content Container #####################-->
+            <div id="contentbar">
+                <!-- ##################### Main Content Header #####################-->
+                <div id="Header">
+                    <div id="currentTask" class="headerDivStyle"><img src="/icons/user.png" alt="">Profile</div>
+                    <div id="appName" class="headerDivStyle">SkyTrust</div>
+                    <div id="userDetails" class="headerDivStyle">
+                        <div id="userDeatail"><label for="" id="userNameDisplay">HammadRafique029</label></div>
+                        <div id="userImg"><a href=""><img src="/icons/profile.png" id="userProfileImg" alt=""></a></div>
+                    </div>
+                </div>
+                <!-- ##################### Main Content Body #####################-->
+                <div id="contentBody">
+                    <div id="ProfileBar">
+                        <div id="userDetialsContainer" class="userPageStyle"><a href="userDetails.html" class="fontStyle1">User Details</a></div>
+                        <div id="paymentMethodsContainer" class="userPageStyle"><a href="userPaymentPage.html" class="fontStyle1">Payments Methods</a></div>
+                        <div id="userSecurityContainer" class="userPageStyle"><a href="userSecurityPage.html" class="fontStyle1">Security</a></div>
+                        <div id="deleteSccountContainer" class="userPageStyle" style="background-color: #D02B2B;"><a href="deleteAccountPage.html" class="fontStyle1">Delete Account</a></div>
+                    </div>
+                    <div id="PageContent">
+                        <div id="Container">
+                            <div id="ContianerCOntent">
+                                <div id="temp"><span class="fontStyle1">Authentication Required:</span></div>
+                                <div id="inputDataContainer">
+                                    <div id="emailAddressContainer" class="detailsBoxStyle2">
+                                        <span class="fontStyle2" style="width: 100px;">Email ID:</span>
+                                        <input type="text" id="gmailIDInput" class="inputStyle1" value="hammadrafique029@gmail.com">
+                                    </div>
+                                    <div id="passwordContainer" class="detailsBoxStyle2">
+                                        <span class="fontStyle2" style="width: 100px;">Password:</span>
+                                        <input type="password" id="passwordInput" class="inputStyle1" value="hammadrafique029@gmail.com">
+                                    </div>
+                                    <div id="passwordContainer" class="detailsBoxStyle2">
+                                        <span class="fontStyle1" style="width: 320px;color: black;font-weight: bold;">Enter OTP Send To Your Email:</span>
+                                        <button type="button" id="getOTP_Btn" class="inputStyle1">Send OTP</button>
+                                     
+                                    </div>
+                                    <div id="otpContainer" class="detailsBoxStyle2">
+                                        <span class="fontStyle2" style="width: 100px;">OTP:</span>
+                                        <input type="text" id="otpInput" class="inputStyle1" style="width:30%; text-align: center;" placeholder="Enter Your OTP ...">
+                                    </div>
+                                </div>
+                                <div id="controlButtonsConatainer">
+                                    <button id="SaveBtn" type="button">Delete Account</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

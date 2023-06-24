@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Reservation System</title>
+    <link rel="stylesheet" href="../PagesDesigns1.css">
+    <link rel="stylesheet" href="profilePage_style.css">
+    <style>
+        #contentBody{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 20px;
+        }
+        #PageContent {
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 2px 2px 10px #7C7777;
+        }
+        #controlButtonsConatainer button:hover{
+            width: 25%;
+            cursor:grab;
+            background-color: #D02B2B;
+            box-shadow: 1px 1px 5px black;
+            transition: all 0.2s;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="">
+        <div id="MainContainer">
+            <!-- ##################### Navigation Details #####################-->
+            <div id="navigationBar">
+                <div id="dashboardContainer" class="navigationBarStyle"><a href="../DashBoard.html"><img src="/icons/dashboard.png" alt="">Dashboard</a></div>
+                <div id="searchflightContainer" class="navigationBarStyle"><a href="../SearchFlight.html"><img src="/icons/flight.png" alt="">Search Flight</a></div>
+                <div id="ticketsContainer" class="navigationBarStyle"><a href="../FlightTickets.html"><img src="/icons/ticket.png" alt="">Flight Tickets</a></div>
+                <div id="trackflightContainer" class="navigationBarStyle"><a href="../trackflightPage.html"><img src="/icons/track.png" alt="">Track FLight</a></div>
+                <div id="profileContainer" class="navigationBarStyle"><a href="userDetails.html"><img src="/icons/user.png" alt="">Profile</a></div>
+            </div>
+            <!-- ##################### Main Content Container #####################-->
+            <div id="contentbar">
+                <!-- ##################### Main Content Header #####################-->
+                <div id="Header">
+                    <div id="currentTask" class="headerDivStyle"><img src="/icons/user.png" alt="">Profile</div>
+                    <div id="appName" class="headerDivStyle">SkyTrust</div>
+                    <div id="userDetails" class="headerDivStyle">
+                        <div id="userDeatail"><label for="" id="userNameDisplay">HammadRafique029</label></div>
+                        <div id="userImg"><a href=""><img src="/icons/profile.png" id="userProfileImg" alt=""></a></div>
+                    </div>
+                </div>
+                <!-- ##################### Main Content Body #####################-->
+                <div id="contentBody">
+                    <div id="ProfileBar">
+                        <div id="userDetialsContainer" class="userPageStyle" style="background-color: #D02B2B;"><a href="userDetails.html" class="fontStyle1">User Details</a></div>
+                        <div id="paymentMethodsContainer" class="userPageStyle"><a href="userPaymentPage.html" class="fontStyle1">Payments Methods</a></div>
+                        <div id="userSecurityContainer" class="userPageStyle"><a href="userSecurityPage.html" class="fontStyle1">Security</a></div>
+                        <div id="deleteSccountContainer" class="userPageStyle"><a href="deleteAccountPage.html" class="fontStyle1">Delete Account</a></div>
+                    </div>
+                    <div id="PageContent">
+                        <div id="Contaier">
+                            <div id="accountDetailsContianer">
+                                <div style="width: 20%; height: 45px;; background-color: black; border-radius: 5px; display: flex; justify-content: center; align-items: center;box-shadow: 1px 1px 5px black;"><span class="fontStyle1">Account Details:</span></div>
+                                <div id="userContainer" class="detailsBoxStyle1" style="margin-top: 10px;">
+                                    <div id="usernameContainer" class="insideDivStyle1">
+                                        <span class="fontStyle2">Username:</span>
+                                        <input type="text" id="UserNameInput" class="inputStyle1" value="hammadrafique029">
+                                    </div>
+                                    <div id="emailContainer" class="insideDivStyle1">
+                                        <span class="fontStyle2">Email Address:</span>
+                                        <input type="text" id="UserNameInput" class="inputStyle1" value="hammadrafique029@gmail.com">
+                                    </div>
+                                </div>
+                                <div id="passwordContainer" class="detailsBoxStyle2">
+                                    <span class="fontStyle2">Password:</span>
+                                    <input type="password" id="UserNameInput" class="inputStyle1" value="hammadrafique029">
+                                </div>
+                            </div>
+                            <div id="userDetailsContainer">
+                                <div style="width: 20%; height: 12%; margin-top: 30px; background-color: black; border-radius: 5px; display: flex; justify-content: center; align-items: center;box-shadow: 1px 1px 5px black;"><span class="fontStyle1">User Details:</span></div>
+                                <div class="detailsBoxStyle1" style="margin-top: 10px;">
+                                    <div id="fnameContainer" class="insideDivStyle1">
+                                        <span class="fontStyle2">First Name:</span>
+                                        <input type="text" id="firstNameInput" class="inputStyle1" placeholder="Enter your First Name ...">
+                                    </div>
+                                    <div id="lnameContainer" class="insideDivStyle1">
+                                        <span class="fontStyle2">Last Name:</span>
+                                        <input type="text" id="lastNameInput" class="inputStyle1"  placeholder="Enter your Last Name ...">
+                                    </div>
+                                </div>
+                                <div id="phoneContainer" class="detailsBoxStyle2">
+                                    <span class="fontStyle2">Phone#:</span>
+                                    <input type="text" id="phoneInput" class="inputStyle1"  placeholder="Enter your Phone number ...">
+                                </div>
+                                <div class="detailsBoxStyle1">
+                                    <div id="cityContainer" class="insideDivStyle1">
+                                        <span class="fontStyle2">City:</span>
+                                        <input type="text" id="cityInput" class="inputStyle1"  placeholder="City Name ...">
+                                    </div>
+                                    <div id="streetContainer" class="insideDivStyle1">
+                                        <span class="fontStyle2">Street Add:</span>
+                                        <input type="text" id="streetAddressInput" class="inputStyle1"  placeholder="Residential Address ...">
+                                    </div>
+                                </div>
+                                <div class="detailsBoxStyle1">
+                                    <div id="countryContainer" class="insideDivStyle1">
+                                        <span class="fontStyle2">Country:</span>
+                                        <input type="text" id="countryInput" class="inputStyle1"  placeholder="Country Name ...">
+                                    </div>
+                                    <div id="nationalityContainer" class="insideDivStyle1">
+                                        <span class="fontStyle2">Nationality:</span>
+                                        <input type="text" id="nationalityInput" class="inputStyle1"  placeholder="Enter your Nationality ...">
+                                    </div>
+                                </div>
+                                <div id="IDContainer" class="detailsBoxStyle2">
+                                    <span class="fontStyle2">Identity ID:</span>
+                                    <input type="text" id="IDInput" class="inputStyle1"  placeholder="ID Number ...">
+                                </div>
+                                <div class="detailsBoxStyle1">
+                                    <div id="dobContainer" class="insideDivStyle1">
+                                        <span class="fontStyle2">Date of Birth:</span>
+                                        <input type="text" id="dobInput" class="inputStyle1"  placeholder="Date of Birth ...">
+                                    </div>
+                                    <div id="genderContainer" class="insideDivStyle1">
+                                        <span class="fontStyle2">Gender:</span>
+                                        <input type="text" id="genderInput" class="inputStyle1" placeholder="Male/ Female/ Other ...">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="controlButtonsConatainer">
+                                <button type="button">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

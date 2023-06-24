@@ -1,0 +1,142 @@
+#ProfileBar{
+    width: 70%;
+    height: 10%;
+    border-radius: 10px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color: #D9D9D9;
+    box-shadow: 2px 2px 10px #655E5E;
+}
+.userPageStyle {
+    width: 23%;
+    height: 80%;
+    border-radius: 10px;
+    background-color: #B4ABAB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 5px #655E5E;
+    transition: all 0.2s;
+}
+.userPageStyle:hover{
+    background-color: #D02B2B;
+}
+.userPageStyle a {
+    width: 99%;
+    height: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#PageContent{
+    width: 80%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#PageContent #Contaier{
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 30px;
+}
+
+.fontStyle1{
+    font-size: 15pt;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+    color: white;
+}
+.detailsBoxStyle1{
+    width: 90%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 20px;
+}
+.detailsBoxStyle2{
+    width: 44%;
+    height: 43px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.insideDivStyle1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.fontStyle2{
+    width: 130px;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.inputStyle1{
+    width: 70%;
+    height: 100%;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    font-size: 10pt;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px black;
+    border: none;
+}
+#accountDetailsContianer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+#userDetailsContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+#controlButtonsConatainer {
+    width: 90%;
+    height: 7%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#controlButtonsConatainer button{
+    width: 20%;
+    height: 100%;
+    background-color: #D02B2B;
+    box-shadow: 1px 1px 5px black;
+    color: white;
+    font-size: 15pt;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    transition: all 0.2s;
+}
+.dropDownStyle{
+    font-size: 11pt;
+    height: 90%;
+    width: 100%;
+    border-radius: 5px;
+    border:none;
+    text-align: center;
+    box-shadow: 1px 1px 5px black;
+}
+.monthsContainerStyle {
+    width: 85%;
+    height: 100%;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Reservation System</title>
+    <link rel="stylesheet" href="../PagesDesigns1.css">
+    <link rel="stylesheet" href="profilePage_style.css">
+    <style>
+        #contentBody{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 20px;
+        }
+        #PageContent #Contaier {
+            padding-left: 150px;
+        }
+        .detailsBoxStyle2 {
+            margin-bottom: 10px;
+        }
+        .detailsBoxStyle1 {
+            margin-bottom: 10px;
+        }
+        #PageContent #Contaier {
+            padding: 0px 10px 0px 80px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px #7C7777;
+        }
+        #controlButtonsConatainer button:hover{
+            width: 30%;
+            cursor:grab;
+            background-color: #D02B2B;
+            box-shadow: 1px 1px 5px black;
+            transition: all 0.2s;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <form action="">
+        <div id="MainContainer">
+            <!-- ##################### Navigation Details #####################-->
+            <div id="navigationBar">
+                <div id="dashboardContainer" class="navigationBarStyle"><a href="../DashBoard.html"><img src="/icons/dashboard.png" alt="">Dashboard</a></div>
+                <div id="searchflightContainer" class="navigationBarStyle"><a href="../SearchFlight.html"><img src="/icons/flight.png" alt="">Search Flight</a></div>
+                <div id="ticketsContainer" class="navigationBarStyle"><a href="../FlightTickets.html"><img src="/icons/ticket.png" alt="">Flight Tickets</a></div>
+                <div id="trackflightContainer" class="navigationBarStyle"><a href="../trackflightPage.html"><img src="/icons/track.png" alt="">Track FLight</a></div>
+                <div id="profileContainer" class="navigationBarStyle"><a href="userDetails.html"><img src="/icons/user.png" alt="">Profile</a></div>
+            </div>
+            <!-- ##################### Main Content Container #####################-->
+            <div id="contentbar">
+                <!-- ##################### Main Content Header #####################-->
+                <div id="Header">
+                    <div id="currentTask" class="headerDivStyle"><img src="/icons/user.png" alt="">Profile</div>
+                    <div id="appName" class="headerDivStyle">SkyTrust</div>
+                    <div id="userDetails" class="headerDivStyle">
+                        <div id="userDeatail"><label for="" id="userNameDisplay">HammadRafique029</label></div>
+                        <div id="userImg"><a href=""><img src="/icons/profile.png" id="userProfileImg" alt=""></a></div>
+                    </div>
+                </div>
+                <!-- ##################### Main Content Body #####################-->
+                <div id="contentBody">
+                    <div id="ProfileBar">
+                        <div id="userDetialsContainer" class="userPageStyle"><a href="userDetails.html" class="fontStyle1">User Details</a></div>
+                        <div id="paymentMethodsContainer" class="userPageStyle" style="background-color: #D02B2B;"><a href="userPaymentPage.html" class="fontStyle1">Payments Methods</a></div>
+                        <div id="userSecurityContainer" class="userPageStyle"><a href="userSecurityPage.html" class="fontStyle1">Security</a></div>
+                        <div id="deleteSccountContainer" class="userPageStyle"><a href="deleteAccountPage.html" class="fontStyle1">Delete Account</a></div>
+                    </div>
+                    <div id="PageContent">
+                        <div id="Contaier">
+                            <div id="paymentDetailsContianer" style="height: 70%;">
+                                <div style="width: 20%; height: 50px; background-color: black; border-radius: 5px; display: flex; justify-content: center; align-items: center; margin-bottom: 40px;box-shadow: 1px 1px 5px black;"><span class="fontStyle1">Payment Details:</span></div>
+                                <div id="holderNameContainer" class="detailsBoxStyle2" style="margin-top: 20px;">
+                                    <span class="fontStyle2" style="width: 130px;">Holder Name:</span>
+                                    <input type="text" id="CardHolderNameInput" class="inputStyle1"  placeholder="Enter your Name ...">
+                                </div>
+                                <div id="CardNoContainer" class="detailsBoxStyle2">
+                                    <span class="fontStyle2" style="width: 130px;">Card#:</span>
+                                    <input type="text" id="CardNoInput" class="inputStyle1"  placeholder="Enter your Card Number ...">
+                                </div>
+          
+                                <div class="detailsBoxStyle1" style="margin-top: 10px;">
+                                    <div id="fnameContainer" class="insideDivStyle1">
+                                        <span style="width: 35%;" class="fontStyle2">Month:</span>
+                                        <div id="flightTypeInputBoxContainer" class="monthsContainerStyle">
+                                            <select name="cars" id="flightTypeDropDown" class="dropDownStyle">
+                                                <option value="volvo">January</option>
+                                                    <option value="saab">February</option>
+                                                    <option value="volvo">March</option>
+                                                    <option value="saab">April</option>
+                                                    <option value="volvo">May</option>
+                                                    <option value="saab">June</option>
+                                                    <option value="volvo">July</option>
+                                                    <option value="saab">August</option>
+                                                    <option value="volvo">September</option>
+                                                    <option value="saab">October</option>
+                                                    <option value="volvo">November</option>
+                                                    <option value="saab">December</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="lnameContainer" class="insideDivStyle1">
+                                        <span style="width: 80px;" class="fontStyle2">Year:</span>
+                                        <div id="flightTypeInputBoxContainer" class="monthsContainerStyle">
+                                            <select id="year" class="dropDownStyle">
+                                                <option value="2023">2023</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2021">2021</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2016">2016</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div id="CVCContainer" class="detailsBoxStyle2">
+                                    <span class="fontStyle2" style="width: 130px;">CVV/CVC:</span>
+                                    <input type="text" id="CVCInput" class="inputStyle1" placeholder="Enter your CVV ..." style="text-align: center;">
+                                </div>
+
+                            </div>
+                            <div id="controlButtonsConatainer">
+                                <button type="button">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

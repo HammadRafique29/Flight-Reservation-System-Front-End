@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Reservation System</title>
+    <link rel="stylesheet" href="PagesDesigns1.css">
+
+    <style>
+        #contentBody {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 10px;
+            background-color: white;
+        }
+        #inputContainer {
+            width: 60%;
+            height: 17%;
+            background-color: #EF4747;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0px 10px 0px;
+        }
+        #inputContainer #row1 {
+            width: 80%;
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #inputContainer #col1 {
+            width: 60%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+            justify-content: center;
+            align-items: center;
+        }
+        #inputContainer #col1 .rowStyle{
+            width: 80%;
+            height: 45%;
+            display: flex;
+        }
+        #inputContainer #col1 span{
+            width: 100px;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+        }
+        #inputContainer #col1 .col1_inputStyle{
+            width: 80%;
+            height: 90%;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            box-shadow: 1px 1px 5px black;
+            text-align: center;
+        }
+        #inputContainer #sep1 {
+            width: 2px;
+            height: 90%;
+            border-radius: 5px;
+            background-color: white;
+        }
+        #inputContainer #col2 {
+            width: 37%;
+            height: 90%;
+        }
+        #inputContainer #col2 #col2_row1 {
+            height: 95%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 5px;
+        }
+        #inputContainer #col2 #col2_row1 span{
+            width: 85%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #inputContainer #col2 .col2_inputStyle{
+            width: 85%;
+            height: 43%;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            box-shadow: 1px 1px 5px black;
+            text-align: center;
+        }
+        #inputContainer #row2 {
+            width: 80%;
+            height: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #inputContainer #row2 button{
+            width: 25%;
+            height: 80%;
+            border-radius: 5px;
+            background-color: black;
+            border: none;
+            outline: none;
+            box-shadow: 1px 1px 5px black;
+            font-size: 12pt;
+            transition: all 0.2s;
+        }
+        #inputContainer #row2 button:hover{
+            width: 30%;
+            font-size: 15pt;
+        }
+
+
+        #contentBody #ContentContainer {
+            width: 90%;
+            height: 80%;
+            border-radius: 10px;
+            margin-top: 5px;
+            box-shadow: 2px 2px 10px #615d5d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #contentBody #ContentContainer #container_AirportSearch {
+            width: 90%;
+            height: 95%;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+        #contentBody #ContentContainer #container_AirportSearch #leftSide_content{
+            width: 60%;
+            height: 99%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #contentBody #ContentContainer #container_AirportSearch #leftSide_content #leftSide_row2{
+            width: 99%;
+            height: 65%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #contentBody #ContentContainer #container_AirportSearch #leftSide_content #leftSide_row2 #leftSide_row2_map{
+            width: 45%;
+            height: 99%;
+            border-radius: 5px;
+        }
+        #contentBody #ContentContainer #container_AirportSearch #leftSide_content #leftSide_row2 #leftSide_row2_map img{
+            width: 99%;
+            height: 99%;
+            border-radius: 5px;
+        }
+        #contentBody #ContentContainer #container_AirportSearch #leftSide_content #leftSide_row2 #leftSide_row2_time_details{
+            width: 55%;
+            height: 99%;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 10px;
+        }
+        #contentBody #ContentContainer #container_AirportSearch #leftSide_content #leftSide_row2 #leftSide_row2_time_details .TimeContainer_Style{
+            width: 95%;
+            height: 48%;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 5px;
+            background-color: #D9D9D9;
+            box-shadow: 2px 2px 5px #787272;
+        }
+        #contentBody #ContentContainer #container_AirportSearch #leftSide_content #leftSide_row2 #leftSide_row2_time_details .TimeContainer_Style .Container_Header{
+            width: 95%;
+            height: 20%;
+            background-color: #958686;
+            border-radius: 5px;
+        }
+        #contentBody #ContentContainer #container_AirportSearch #leftSide_content #leftSide_row2 #leftSide_row2_time_details .TimeContainer_Style .Container_Header span{
+            width: 95%;
+            height: 99%;
+            font-size: 13pt;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-left: 10px;
+        }
+        #contentBody #ContentContainer #container_AirportSearch #leftSide_content #leftSide_row2 #leftSide_row2_time_details .TimeContainer_Style .Container_Body{
+            width: 90%;
+            height: 65%;
+            background-color: white;
+            border-radius: 5px;
+        }
+        #container_AirportSearch #leftSide_content #leftSide_row2 #leftSide_row2_time_details .TimeContainer_Style .Container_Body{
+            width: 95%;
+            height: 70%;
+            background-color: rebeccapurple;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #container_AirportSearch #leftSide_content #leftSide_row2 #leftSide_row2_time_details .TimeContainer_Style .Container_Body .container_body_style1{
+            width: 99%;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .TimeContainer_Style .Container_Body .container_body_style1 .contianer_body_inside_Style1 {
+            width: 50%;
+            height: 99%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .TimeContainer_Style .Container_Body .container_body_style1 .contianer_body_inside_Style1 span {
+            width: 90%;
+            height: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13pt;
+            font-weight: bold;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            margin-left: 5%;
+        }
+        .TimeContainer_Style .Container_Body .container_body_style1 .contianer_body_inside_Style1 label {
+            width: 99%;
+            height: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12pt;
+            text-align: center;
+        }
+
+
+        #container_AirportSearch #leftSide_content #leftSide_row2 #leftSide_row2_time_details .TimeContainer_Style .Container_Body .container_body_style2{
+            width: 99%;
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .TimeContainer_Style .Container_Body .container_body_style2 span {
+            font-size: 10pt;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .TimeContainer_Style .Container_Body .container_body_style2 label {
+            font-size: 11pt;
+            font-weight: normal;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #contentBody #ContentContainer #container_AirportSearch #rideSide_content{
+            width: 40%;
+            height: 99%;
+        }
+        #contentBody #ContentContainer #container_AirportSearch #rideSide_content #Flight_Details_Container {
+            width: 99%;
+            height: 99%;
+            border: 5px;
+            background-color: #D9D9D9;
+            box-shadow: 2px 2px 5px #D9D9D9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 5px;
+            box-shadow: 2px 2px 5px #787272;
+            border-radius: 10px;
+        }
+        .Flight_Detils_Container_Style {
+            width: 95%;
+            height: 24%;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 5px;
+        }
+        .Flight_Detils_Container_Style  .Container_Header {
+            width: 95%;
+            height: 23%;
+            border-radius: 5px;
+            background-color: #958686;
+            color: white;
+        }
+        .Flight_Detils_Container_Style .Container_Body {
+            width: 94%;
+            height: 68%;
+            border-radius: 5px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 10px;
+            
+        }
+        .Container_Body .right_span_Style {
+            width: 99%;
+            font-size: 11pt;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 5%;
+        }
+        .Container_Body .right_label_Style {
+            width: 99%;
+            font-size: 11pt;
+            font-weight: normal;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #Flight_info_Container {
+            width: 95%;
+            height: 45%;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 5px;
+            
+        }
+        #Flight_info_Container  .Container_Body {
+            width: 94%;
+            height: 75%;
+            border-radius: 5px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 15px;
+        }
+        #Flight_info_Container  .Container_Header {
+            width: 95%;
+            height: 15%;
+            border-radius: 5px;
+            background-color: #958686;
+            color: white;
+        }
+
+        .fontStyle_custom{
+            width: 95%;
+            height: 100%;
+            margin-left: 5%;
+            font-size: 13pt;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <form action="">
+        <div id="MainContainer">
+            <!-- ##################### Navigation Details #####################-->
+            <div id="navigationBar">
+                <div id="dashboardContainer" class="navigationBarStyle"><a href="DashBoard.html"><img src="/icons/dashboard.png" alt="">Dashboard</a></div>
+                <div id="searchflightContainer" class="navigationBarStyle"><a href="SearchFlight.html"><img src="/icons/flight.png" alt="">Search Flight</a></div>
+                <div id="ticketsContainer" class="navigationBarStyle"><a href="FlightTickets.html"><img src="/icons/ticket.png" alt="">Flight Tickets</a></div>
+                <div id="trackflightContainer" class="navigationBarStyle"><a href="trackflightPage.html"><img src="/icons/track.png" alt="">Track FLight</a></div>
+                <div id="profileContainer" class="navigationBarStyle"><a href="profilePages/userDetails.html"><img src="/icons/user.png" alt="">Profile</a></div>
+            </div>
+            <!-- ##################### Main Content Container #####################-->
+            <div id="contentbar">
+                <!-- ##################### Main Content Header #####################-->
+                <div id="Header">
+                    <div id="currentTask" class="headerDivStyle"><img src="/icons/track.png" alt="">Track Flight</div>
+                    <div id="appName" class="headerDivStyle">SkyTrust</div>
+                    <div id="userDetails" class="headerDivStyle">
+                        <div id="userDeatail"><label for="" id="userNameDisplay">HammadRafique029</label></div>
+                        <div id="userImg"><a href=""><img src="/icons/profile.png" id="userProfileImg" alt=""></a></div>
+                    </div>
+                </div>
+                <!-- ##################### Main Content Body #####################-->
+                <div id="contentBody" style="background-color: white;">
+                    <div id="inputContainer">
+                        <div id="row1">
+                            <div id="col1">
+                                <div id="col1_row1" class="rowStyle">
+                                    <span class="fontStyle2" style="width: 100px;">Origin:</span>
+                                    <input id="originInput" type="text" placeholder="Enter Your Origin ..." class="col1_inputStyle">
+                                </div>
+                                <div id="col1_row2" class="rowStyle">
+                                    <span class="fontStyle2" style="width: 100px;">Destination:</span>
+                                    <input id="destinationInput" type="text" placeholder="Enter Your Destination ..." class="col1_inputStyle">
+                                </div>
+                            </div>
+                            <div id="sep1"></div>
+                            <div id="col2">
+                                <div id="col2_row1" class="rowStyle">
+                                    <span class="fontStyle2">Flight Number:</span>
+                                    <input id="flightNumberInput" type="text" placeholder="Enter Flight Number ..." style="text-align: center;" class="col2_inputStyle">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="row2">
+                            <button type="button" id="TrackFlight_Btn" class="fontStyle1">Track Flight</button>
+                        </div>
+                    </div>
+                    <div id="ContentContainer">
+                        <div id="container_AirportSearch">
+                            <div id="leftSide_content">
+                                <div id="leftSide_row1">
+                                    <div id="leftSide_row1_row1">
+                                        <div id="leftSide_row1_row1_col1"><img src="/icons/airline2.svg" alt="" id="flight_Airline_Image"></div>
+                                        <div id="leftSide_row1_row1_col2">
+                                            <div class="Flight_head_data_Style"><label for="" id="flight_Airline_Name">AirBlue</label></div>
+                                            <div class="Flight_head_data_Style2"><label for="" id="flight_Origin_Name_with_opcode" class="fontStyle2">Karachi , KHI</label></div>
+                                            <div class="Flight_head_data_Style2"><label for="" id="flight_Origin_Date_with_time" class="fontStyle2">20 May 2023 12:00PM</label></div>
+                                        </div>
+                                        <div id="leftSide_row1_row1_col3">
+                                            <div class="Flight_head_data_Style"></div>
+                                            <div class="Flight_head_data_Style2"><label for="" id="flight_Destination_Name_with_opcode" class="fontStyle2">Lahore , LHR</label></div>
+                                            <div class="Flight_head_data_Style2"><label for="" id="flight_Destination_Date_with_time" class="fontStyle2">20 May 2023 12:00PM</label></div>
+                                        </div>
+                                    </div>
+                                    <div id="leftSide_row1_row2">
+                                        <span class="fontStyle2">EXPECTED TO DEPART IN<label for="" id="flight_expected_duration"> 7 HOURS 14 </label>MINUTES</span>
+                                    </div>
+                                </div>
+                                <div id="leftSide_row2">
+                                    <div id="leftSide_row2_map"><img src="/icons/googe_map.png" alt=""></div>
+                                    <div id="leftSide_row2_time_details">
+                                        <div id="Dep_Time_Container" class="TimeContainer_Style">
+                                            <div class="Container_Header"><span>Departure Date:</span></div>
+                                            <div class="Container_Body">
+                                                <div id="Gate_Dep_TIme" class="container_body_style1">
+                                                    <div class="contianer_body_inside_Style1">
+                                                        <span>Gate Dep:</span>
+                                                        <label for="" id="Gate_Dep_with_opcode_input">8:59PM KHI</label>
+                                                    </div>
+                                                    <div class="contianer_body_inside_Style1">
+                                                        <span>Dep Time:</span>
+                                                        <label for="" id="TakeOff_Time_with_opcode_input">9:09PM KHI</label>
+                                                    </div>
+                                                </div>
+                                                <div id="Delay_Time" class="container_body_style2">
+                                                    <span>Average Delay: <label for="" id="Total_Departure_Delay">10 min</label></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="Arr_Time_Container" class="TimeContainer_Style">
+                                            <div class="Container_Header"><span>Arrival Date:</span></div>
+                                            <div class="Container_Body">
+                                                <div id="Landing_Arriva_TIme" class="container_body_style1">
+                                                    <div class="contianer_body_inside_Style1">
+                                                        <span>Landing Time:</span>
+                                                        <label for="" id="Landing_Time_with_opcode_input">7:59AM KHI</label>
+                                                    </div>
+                                                    <div class="contianer_body_inside_Style1">
+                                                        <span>Get Arrival:</span>
+                                                        <label for="" id="Get_Arrival_Time_with_opcode_input">8:09AM KHI</label>
+                                                    </div>
+                                                </div>
+                                                <div id="Delay_Time" class="container_body_style2">
+                                                    <span>Average Delay: <label for="" id="Total_Destination_Delay">10 min</label></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="rideSide_content">
+                                <div id="Flight_Details_Container">
+                                    <div id="Aircraft_info_Container" class="Flight_Detils_Container_Style">
+                                        <div class="Container_Header"><span class="fontStyle_custom">Arrival Date:</span></div>
+                                            <div class="Container_Body">
+                                                <span class="right_span_Style">Aircraft Type: <label for="" id="Aircraft_Type_Result" class="right_label_Style">Airbus A320 (twin-jet)</label></span> 
+                                            </div>
+                                    </div>
+                                    <div id="Airline_info_Container" class="Flight_Detils_Container_Style">
+                                        <div class="Container_Header"><span class="fontStyle_custom">Airline Information:</span></div>
+                                            <div class="Container_Body">
+                                                <span class="right_span_Style">Airline: <label for="" id="Airline_Company_Name" class="right_label_Style">"JetBlue"</label></span> 
+                                                <span class="right_span_Style">Cabin: <label for="" id="Airline_Flight_Class" class="right_label_Style">Economy (No Meal)</label></span>
+                                            </div>
+                                    </div>
+                                    <div id="Flight_info_Container">
+                                        <div class="Container_Header"><span class="fontStyle_custom">Arrival Date:</span></div>
+                                            <div class="Container_Body">
+                                                <span class="right_span_Style">Speed: <label for="" id="Flight_Speed" class="right_label_Style">519mph</label></span> 
+                                                <span class="right_span_Style">Altitude: <label for="" id="Flight_Altitude" class="right_label_Style">32,000 ft</label></span> 
+                                                <span class="right_span_Style">Distance: <label for="" id="Flight_Distance" class="right_label_Style">Direct: 2,409 mi</label></span> 
+                                                <span class="right_span_Style">Route: <label for="" id="Flight_Route" class="right_label_Style">RBV Q430 BYRDD J48 EMI J48 CSN </label></span> 
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

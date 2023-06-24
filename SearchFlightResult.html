@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Reservation System</title>
+    <link rel="stylesheet" href="PagesDesigns1.css">
+
+    <style>
+        #inputContainer {
+            width: 80%;
+            height: 17%;
+            background-color: #EF4747;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #inputContainer #row1 {
+            width: 85%;
+            height: 60%;
+            background-color: transparent;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            column-gap: 20px;
+        }
+        #row1 .colStyle {
+            width: 30%;
+            height: 85%;
+            border-radius: 5px;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 5px;
+        }
+        #row1 .colStyle .inputContainerStyle1 {
+            width: 99%;
+            height: 40%;
+            background-color: transparent;
+            border-radius: 5px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            column-gap: 5px;
+            font-size: 13pt;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        #row1 .colStyle .inputContainerStyle1 span {
+            width: 35%;
+            display: flex;
+            justify-content: center;
+        }
+        #row1 .colStyle .inputContainerStyle1 .inputBoxContainerStyle {
+            width: 85%;
+            height: 100%;
+        }
+        .dropDownStyle{
+            font-size: 11pt;
+            height: 90%;
+            width: 50%;
+            border-radius: 5px;
+            border:none;
+            box-shadow: 1px 1px 5px black;
+            text-align: center;
+        }
+        #row1 .colStyle .inputContainerStyle1 input {
+            width: 95%;
+            height: 80%;
+            border-radius: 10px;
+            color: black;
+            outline: none;
+            border:none;
+            box-shadow: 1px 1px 5px black;
+            text-align: center;
+
+        }
+
+        #inputContainer #row2 {
+            width: 15%;
+            height: 25%;
+            background-color: aqua;
+            border-radius: 10px;
+            color: white;
+            font-size: 11pt;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: all 0.2s;
+        }
+        #inputContainer #row2:hover {
+            width: 20%;
+            font-weight: bold;
+            background-color: #000000;
+        }
+        #inputContainer #row2 button {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border-radius: 10px;
+            color: white;
+            outline: none;
+            border: none;
+        }
+        #inputContainer #row2 button:hover {
+            font-weight: bold;
+        } 
+        #resultContainer {
+            width: 80%;
+            height: 75%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+  
+        ::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+        }
+  
+  /* other browsers */
+  
+        #resultBoxContainer {
+            width: 90%;
+            height: 95%;
+            border-radius: 10px;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 6px;
+            overflow-y: scroll;
+            scrollbar-width: thick;
+        }
+        .flightBoxesContainerStyle {
+            width: 99%;
+            border-radius: 10px;
+            height: 15%;
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            column-gap: 20px;
+            background-color: white;
+            box-shadow: 1px 1px 5px black;
+            
+        }
+        .fontStyle1 {
+            font-size: 12pt;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+        }
+        .fontStyle2 {
+            font-size: 12pt;
+            font-weight: normal;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            width: 100%;
+            text-align: center;
+        }
+
+        .flightBoxesContainerStyle #flightImgContianer {
+            width: 8%;
+            height: 90%;
+            background-color: transparent;
+            border-radius: 10px;
+            border: none;
+        }
+        .flightBoxesContainerStyle #flightImgContianer img{
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+        }
+        .flightBoxesContainerStyle  #flightServicesContainer{
+            width: 20%;
+            height: 95%;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 5px;
+        }
+        .flightBoxesContainerStyle  #flightServicesContainer #Services {
+            width: 100%;
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .flightBoxesContainerStyle  #flightServicesContainer span {
+            width: 100%;
+            height: 30%;
+        }
+        
+        #sepLineContainer{
+            width: 2px;
+            height: 80%;
+            background-color: black;
+        }
+        #buyBoxContainer {
+            width: 13%;
+            height: 95%;
+            row-gap: 5px;
+        }
+        #buyBoxContainer #BuyContainer {
+            width: 80%;
+            height: 50%;
+            border-radius: 10px;
+            display: flex;
+            background-color: #AEA3A3;
+            box-shadow: 0.05px 0.05px 3px black
+
+        }
+        #BuyContainer label {
+            width: 60%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        #BuyContainer a {
+            width: 40%;
+            height: 100%;
+            border-radius: 0px 10px 10px 0px;
+            background-color: transparent;
+            
+        }
+        #BuyContainer a button {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            border-radius: 0px 10px 10px 0px;
+            background-color: #CC1D1D;
+            color: white;
+            transition: all 0.2s;
+            cursor:grab;
+        }
+        #BuyContainer a button:hover {
+            font-size: 14pt;
+            
+        }
+        #SeatsContainer {
+            width: 100%;
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .flightBoxesContainerStyle .resultBoxStyle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 10px;
+        }
+        #pageControlsContainer {
+            width: 80%;
+            height: 3%;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #pageControlsContainer #Controls {
+            width: 23%;
+            height: 95%;
+        }
+        #pageControlsContainer #Controls button {
+            width:40%;
+            height: 100%;
+            color: white;
+            background-color: #EB2929;
+            border: none;
+            box-shadow: 1px 1px 5px black;
+            margin-right: 2px;
+            transition: all 0.2s;
+        }
+        #pageControlsContainer #Controls button:hover {
+            width:43%;
+            border:1px solid black
+            
+        }
+        #pageControlsContainer #Controls #PreviousBtn {
+            border-radius: 10px 0px 0px 10px;
+        }
+        #pageControlsContainer #Controls #NextBtn {
+            border-radius: 0px 10px 10px 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <div id="MainContainer">
+            <!-- ##################### Navigation Details #####################-->
+            <div id="navigationBar">
+                <div id="dashboardContainer" class="navigationBarStyle"><a href="DashBoard.html"><img src="/icons/dashboard.png" alt="">Dashboard</a></div>
+                <div id="searchflightContainer" class="navigationBarStyle"><a href="SearchFlight.html"><img src="/icons/flight.png" alt="">Search Flight</a></div>
+                <div id="ticketsContainer" class="navigationBarStyle"><a href="FlightTickets.html"><img src="/icons/ticket.png" alt="">Flight Tickets</a></div>
+                <div id="trackflightContainer" class="navigationBarStyle"><a href="trackflightPage.html"><img src="/icons/track.png" alt="">Track FLight</a></div>
+                <div id="profileContainer" class="navigationBarStyle"><a href="profilePages/userDetails.html"><img src="/icons/user.png" alt="">Profile</a></div>
+            </div>
+            <!-- ##################### Main Content Container #####################-->
+            <div id="contentbar">
+                <div id="inputContainer">
+                    <div id="row1">
+                        <div id="insideRowCol1" class="colStyle">
+                            <div id="originInputContainer" class="inputContainerStyle1">
+                                <span>Origin:</span>
+                                <div id="originInputBoxContainer" class="inputBoxContainerStyle"><input type="text" name="" id="originInput" placeholder="Enter your Origin ... "></div>
+                            </div>
+                            <div id="dateInputContainer" class="inputContainerStyle1">
+                                <span>Date:</span>
+                                <div id="dateInputBoxContainer" class="inputBoxContainerStyle"><input type="text" name="" id="dateInput" placeholder="Enter Departure Date ... "></div>
+                            </div>
+                        </div>
+                        <div id="insideRowCol2" class="colStyle">
+                            <div id="destInputContainer" class="inputContainerStyle1">
+                                <span>Destination:</span>
+                                <div id="destInputBoxContainer" class="inputBoxContainerStyle"><input type="text" name="" id="destInput" placeholder="Enter your Destination ... "></div>
+                            </div>
+                            <div id="returnDateContainer" class="inputContainerStyle1">
+                                <span style="width: 35%;">Return Date:</span>
+                                <div id="returndateInputBoxContainer" class="inputBoxContainerStyle"><input type="text" name="" id="returndateInput" placeholder="Enter Return Date ... "></div>
+                            </div>
+                        </div>
+                        <div id="insideRowCol3" class="colStyle" style="align-items: flex-start;">
+                            <div id="destInputContainer" class="inputContainerStyle1" style="width: 50%;">
+                                <span>Seats:</span>
+                                <div id="seatsInputBoxContainer" class="inputBoxContainerStyle"><input type="text" name="" id="seatsInput" placeholder="No of Seats ... "></div>
+                            </div>
+                            <div id="flightTypeContainer" class="inputContainerStyle1">
+                                <span style="width: 35%;">Flight type:</span>
+                                <div id="flightTypeInputBoxContainer" class="inputBoxContainerStyle">
+                                    <select name="cars" id="flightTypeDropDown" class="dropDownStyle">
+                                        <option value="volvo">One Way</option>
+                                        <option value="saab">Round Trip</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="row2">
+                        <button type="button">Search Flights</button>
+                    </div>
+                </div>
+                <div id="resultContainer">
+                    <div id="resultBoxContainer">
+                        <div class="flightBoxesContainerStyle" id="flight1">
+                            <div id="flightImgContianer"><img src="icons/airline2.svg" alt="" id="flight1_Image"></div>
+                            <div id="flightTimeContainer" class="resultBoxStyle"><label for="" id="flight1_Time" class="fontStyle1">3:40 Am - 5:50 Pm</label><label for="" id="flightName" class="fontStyle2">MultiAirlines</label></div>
+                            <div id="flightPathContainer" class="resultBoxStyle"><label for="" id="flight1_Path" class="fontStyle1">(ISL - LON)</label><label for="" id="flightStops" class="fontStyle2">2 Stops at Abu Dabi</label></div>
+                            <div id="flightServicesContainer" class="resultBoxStyle"> 
+                                <div id="Services"><img src="icons/youtube.png" width="90px" alt="" id="Name"><img src="icons/wifi.png" width="50px" style="margin-bottom: 10px;" alt="" id="Name"></div>
+                                <span class="fontStyle1" style="text-align: center;">Duration: <label for="" id="flight1_Duration" class="fontStyle2">15h - 45m</label></span>
+                            </div>
+                            <div id="sepLineContainer"></div>
+                            <div id="buyBoxContainer" class="resultBoxStyle">
+                                <div id="BuyContainer">
+                                    <label for="" id="flight1_Price" class="fontStyle1">$52,30</label>
+                                    <a href="BuyFlight_Ticket.html"><button type="button" class="fontStyle1" id="flight1_Buy">Buy</button></a>
+                                </div>
+                                <div id="SeatsContainer"><span class="fontStyle1"><label class="fontStyle2" for="" id="flight1_Seats">2</label> Seats Left</span></div>
+                            </div>
+                        </div>
+                        <div class="flightBoxesContainerStyle" id="flight2">
+                            <div id="flightImgContianer"><img src="icons/Aeroflot-Russian Airlines logo.svg" alt="" id="flight2_Image"></div>
+                            <div id="flightTimeContainer" class="resultBoxStyle"><label for="" id="flight2_Time" class="fontStyle1">3:40 Am - 5:50 Pm</label><label for="" id="flightName" class="fontStyle2">MultiAirlines</label></div>
+                            <div id="flightPathContainer" class="resultBoxStyle"><label for="" id="flight2_Path" class="fontStyle1">(ISL - LON)</label><label for="" id="flightStops" class="fontStyle2">2 Stops at Abu Dabi</label></div>
+                            <div id="flightServicesContainer" class="resultBoxStyle"> 
+                                <div id="Services"><img src="icons/youtube.png" width="90px" alt="" id="Name"><img src="icons/wifi.png" width="50px" style="margin-bottom: 10px;" alt="" id="Name"></div>
+                                <span class="fontStyle1" style="text-align: center;">Duration: <label for="" id="flight2_Duration" class="fontStyle2">15h - 45m</label></span>
+                            </div>
+                            <div id="sepLineContainer"></div>
+                            <div id="buyBoxContainer" class="resultBoxStyle">
+                                <div id="BuyContainer">
+                                    <label for="" id="flight2_Price" class="fontStyle1">$52,30</label>
+                                    <a href="BuyFlight_Ticket.html"><button type="button" class="fontStyle1" id="flight2_Buy">Buy</button></a>
+                                </div>
+                                <div id="SeatsContainer"><span class="fontStyle1"><label class="fontStyle2" for="" id="flight2_Seats">2</label> Seats Left</span></div>
+                            </div>
+                        </div>
+                        <div class="flightBoxesContainerStyle" id="flight3">
+                            <div id="flightImgContianer"><img src="icons/Air France logo.svg" alt="" id="flight3_Image"></div>
+                            <div id="flightTimeContainer" class="resultBoxStyle"><label for="" id="flight3_Time" class="fontStyle1">3:40 Am - 5:50 Pm</label><label for="" id="flightName" class="fontStyle2">MultiAirlines</label></div>
+                            <div id="flightPathContainer" class="resultBoxStyle"><label for="" id="flight3_Path" class="fontStyle1">(ISL - LON)</label><label for="" id="flightStops" class="fontStyle2">2 Stops at Abu Dabi</label></div>
+                            <div id="flightServicesContainer" class="resultBoxStyle"> 
+                                <div id="Services"><img src="icons/youtube.png" width="90px" alt="" id="Name"><img src="icons/wifi.png" width="50px" style="margin-bottom: 10px;" alt="" id="Name"></div>
+                                <span class="fontStyle1" style="text-align: center;">Duration: <label for="" id="flight3_Duration" class="fontStyle2">15h - 45m</label></span>
+                            </div>
+                            <div id="sepLineContainer"></div>
+                            <div id="buyBoxContainer" class="resultBoxStyle">
+                                <div id="BuyContainer">
+                                    <label for="" id="flight3_Price" class="fontStyle1">$52,30</label>
+                                    <a href="BuyFlight_Ticket.html"><button type="button" class="fontStyle1" id="flight3_Buy">Buy</button></a>
+                                </div>
+                                <div id="SeatsContainer"><span class="fontStyle1"><label class="fontStyle2" for="" id="flight3_Seats">2</label> Seats Left</span></div>
+                            </div>
+                        </div>
+                        <div class="flightBoxesContainerStyle" id="flight4">
+                            <div id="flightImgContianer"><img src="icons/Turkish Airlines logo.png" alt="" id="flight3_Image"></div>
+                            <div id="flightTimeContainer" class="resultBoxStyle"><label for="" id="flight3_Time" class="fontStyle1">3:40 Am - 5:50 Pm</label><label for="" id="flightName" class="fontStyle2">MultiAirlines</label></div>
+                            <div id="flightPathContainer" class="resultBoxStyle"><label for="" id="flight3_Path" class="fontStyle1">(ISL - LON)</label><label for="" id="flightStops" class="fontStyle2">2 Stops at Abu Dabi</label></div>
+                            <div id="flightServicesContainer" class="resultBoxStyle"> 
+                                <div id="Services"><img src="icons/youtube.png" width="90px" alt="" id="Name"><img src="icons/wifi.png" width="50px" style="margin-bottom: 10px;" alt="" id="Name"></div>
+                                <span class="fontStyle1" style="text-align: center;">Duration: <label for="" id="flight3_Duration" class="fontStyle2">15h - 45m</label></span>
+                            </div>
+                            <div id="sepLineContainer"></div>
+                            <div id="buyBoxContainer" class="resultBoxStyle">
+                                <div id="BuyContainer">
+                                    <label for="" id="flight3_Price" class="fontStyle1">$52,30</label>
+                                    <a href="BuyFlight_Ticket.html"><button type="button" class="fontStyle1" id="flight3_Buy">Buy</button></a>
+                                </div>
+                                <div id="SeatsContainer"><span class="fontStyle1"><label class="fontStyle2" for="" id="flight3_Seats">2</label> Seats Left</span></div>
+                            </div>
+                        </div>
+                        <div class="flightBoxesContainerStyle" id="flight5">
+                            <div id="flightImgContianer"><img src="icons/Qatar Airways logo.svg" alt="" id="flight3_Image"></div>
+                            <div id="flightTimeContainer" class="resultBoxStyle"><label for="" id="flight3_Time" class="fontStyle1">3:40 Am - 5:50 Pm</label><label for="" id="flightName" class="fontStyle2">MultiAirlines</label></div>
+                            <div id="flightPathContainer" class="resultBoxStyle"><label for="" id="flight3_Path" class="fontStyle1">(ISL - LON)</label><label for="" id="flightStops" class="fontStyle2">2 Stops at Abu Dabi</label></div>
+                            <div id="flightServicesContainer" class="resultBoxStyle"> 
+                                <div id="Services"><img src="icons/youtube.png" width="90px" alt="" id="Name"><img src="icons/wifi.png" width="50px" style="margin-bottom: 10px;" alt="" id="Name"></div>
+                                <span class="fontStyle1" style="text-align: center;">Duration: <label for="" id="flight3_Duration" class="fontStyle2">15h - 45m</label></span>
+                            </div>
+                            <div id="sepLineContainer"></div>
+                            <div id="buyBoxContainer" class="resultBoxStyle">
+                                <div id="BuyContainer">
+                                    <label for="" id="flight3_Price" class="fontStyle1">$52,30</label>
+                                    <a href="BuyFlight_Ticket.html"><button type="button" class="fontStyle1" id="flight3_Buy">Buy</button></a>
+                                </div>
+                                <div id="SeatsContainer"><span class="fontStyle1"><label class="fontStyle2" for="" id="flight3_Seats">2</label> Seats Left</span></div>
+                            </div>
+                        </div>
+                        <div class="flightBoxesContainerStyle" id="flight6">
+                            <div id="flightImgContianer"><img src="icons/Alitalia logo.svg" alt="" id="flight3_Image"></div>
+                            <div id="flightTimeContainer" class="resultBoxStyle"><label for="" id="flight3_Time" class="fontStyle1">3:40 Am - 5:50 Pm</label><label for="" id="flightName" class="fontStyle2">MultiAirlines</label></div>
+                            <div id="flightPathContainer" class="resultBoxStyle"><label for="" id="flight3_Path" class="fontStyle1">(ISL - LON)</label><label for="" id="flightStops" class="fontStyle2">2 Stops at Abu Dabi</label></div>
+                            <div id="flightServicesContainer" class="resultBoxStyle"> 
+                                <div id="Services"><img src="icons/youtube.png" width="90px" alt="" id="Name"><img src="icons/wifi.png" width="50px" style="margin-bottom: 10px;" alt="" id="Name"></div>
+                                <span class="fontStyle1" style="text-align: center;">Duration: <label for="" id="flight3_Duration" class="fontStyle2">15h - 45m</label></span>
+                            </div>
+                            <div id="sepLineContainer"></div>
+                            <div id="buyBoxContainer" class="resultBoxStyle">
+                                <div id="BuyContainer">
+                                    <label for="" id="flight3_Price" class="fontStyle1">$52,30</label>
+                                    <a href="BuyFlight_Ticket.html"><button type="button" class="fontStyle1" id="flight3_Buy">Buy</button></a>
+                                </div>
+                                <div id="SeatsContainer"><span class="fontStyle1"><label class="fontStyle2" for="" id="flight3_Seats">2</label> Seats Left</span></div>
+                            </div>
+                        </div>
+
+                        <div class="flightBoxesContainerStyle" id="flight6">
+                            <div id="flightImgContianer"><img src="icons/Gulf Air logo.svg" alt="" id="flight3_Image"></div>
+                            <div id="flightTimeContainer" class="resultBoxStyle"><label for="" id="flight3_Time" class="fontStyle1">3:40 Am - 5:50 Pm</label><label for="" id="flightName" class="fontStyle2">MultiAirlines</label></div>
+                            <div id="flightPathContainer" class="resultBoxStyle"><label for="" id="flight3_Path" class="fontStyle1">(ISL - LON)</label><label for="" id="flightStops" class="fontStyle2">2 Stops at Abu Dabi</label></div>
+                            <div id="flightServicesContainer" class="resultBoxStyle"> 
+                                <div id="Services"><img src="icons/youtube.png" width="90px" alt="" id="Name"><img src="icons/wifi.png" width="50px" style="margin-bottom: 10px;" alt="" id="Name"></div>
+                                <span class="fontStyle1" style="text-align: center;">Duration: <label for="" id="flight3_Duration" class="fontStyle2">15h - 45m</label></span>
+                            </div>
+                            <div id="sepLineContainer"></div>
+                            <div id="buyBoxContainer" class="resultBoxStyle">
+                                <div id="BuyContainer">
+                                    <label for="" id="flight3_Price" class="fontStyle1">$52,30</label>
+                                    <a href="BuyFlight_Ticket.html"><button type="button" class="fontStyle1" id="flight3_Buy">Buy</button></a>
+                                </div>
+                                <div id="SeatsContainer"><span class="fontStyle1"><label class="fontStyle2" for="" id="flight3_Seats">2</label> Seats Left</span></div>
+                            </div>
+                        </div>
+                        <div class="flightBoxesContainerStyle" id="flight6">
+                            <div id="flightImgContianer"><img src="icons/airline2.svg" alt="" id="flight3_Image"></div>
+                            <div id="flightTimeContainer" class="resultBoxStyle"><label for="" id="flight3_Time" class="fontStyle1">3:40 Am - 5:50 Pm</label><label for="" id="flightName" class="fontStyle2">MultiAirlines</label></div>
+                            <div id="flightPathContainer" class="resultBoxStyle"><label for="" id="flight3_Path" class="fontStyle1">(ISL - LON)</label><label for="" id="flightStops" class="fontStyle2">2 Stops at Abu Dabi</label></div>
+                            <div id="flightServicesContainer" class="resultBoxStyle"> 
+                                <div id="Services"><img src="icons/youtube.png" width="90px" alt="" id="Name"><img src="icons/wifi.png" width="50px" style="margin-bottom: 10px;" alt="" id="Name"></div>
+                                <span class="fontStyle1" style="text-align: center;">Duration: <label for="" id="flight3_Duration" class="fontStyle2">15h - 45m</label></span>
+                            </div>
+                            <div id="sepLineContainer"></div>
+                            <div id="buyBoxContainer" class="resultBoxStyle">
+                                <div id="BuyContainer">
+                                    <label for="" id="flight3_Price" class="fontStyle1">$52,30</label>
+                                    <a href="BuyFlight_Ticket.html"><button type="button" class="fontStyle1" id="flight3_Buy">Buy</button></a>
+                                </div>
+                                <div id="SeatsContainer"><span class="fontStyle1"><label class="fontStyle2" for="" id="flight3_Seats">2</label> Seats Left</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div id="pageControlsContainer">
+                    <div id="Controls"><button id="PreviousBtn" type="button">Previous</button><button type="button" id="NextBtn">Next</button><label style="margin-left: 10px; color: black;" for="" id="curPage" class="fontStyle2">5</label>/ <label for="" id="totalPage" class="fontStyle1" style="color: black; font-weight: bold;">15</label></div>
+                </div>-->
+            </div>
+        </div>
+    </form>
+</body>
+</html>

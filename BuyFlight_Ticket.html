@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Reservation System</title>
+    <link rel="stylesheet" href="PagesDesigns1.css">
+
+    <style>
+        #inputContainer {
+            width: 80%;
+            height: 17%;
+            background-color: #EF4747;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #inputContainer #row1 {
+            width: 85%;
+            height: 60%;
+            background-color: transparent;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            column-gap: 20px;
+        }
+        #row1 .colStyle {
+            width: 30%;
+            height: 85%;
+            border-radius: 5px;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 5px;
+        }
+        #row1 .colStyle .inputContainerStyle1 {
+            width: 99%;
+            height: 40%;
+            background-color: transparent;
+            border-radius: 5px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            column-gap: 5px;
+            font-size: 13pt;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+
+        #row1 .colStyle .inputContainerStyle1 span {
+            width: 35%;
+            display: flex;
+            justify-content: center;
+        }
+        #row1 .colStyle .inputContainerStyle1 .inputBoxContainerStyle {
+            width: 85%;
+            height: 100%;
+        }
+        .dropDownStyle{
+            font-size: 11pt;
+            height: 90%;
+            width: 50%;
+            border-radius: 5px;
+            border:none;
+            box-shadow: 1px 1px 5px black;
+            text-align: center;
+        }
+        #row1 .colStyle .inputContainerStyle1 input {
+            width: 95%;
+            height: 80%;
+            border-radius: 10px;
+            color: black;
+            outline: none;
+            border:none;
+            box-shadow: 1px 1px 5px black;
+            text-align: center;
+
+        }
+
+        #inputContainer #row2 {
+            width: 15%;
+            height: 25%;
+            background-color: aqua;
+            border-radius: 10px;
+            color: white;
+            font-size: 11pt;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: all 0.2s;
+        }
+        #inputContainer #row2:hover {
+            width: 20%;
+            font-weight: bold;
+            background-color: #000000;
+        }
+        #inputContainer #row2 button {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border-radius: 10px;
+            color: white;
+            outline: none;
+            border: none;
+        }
+        #inputContainer #row2 button:hover {
+            font-weight: bold;
+        } 
+        #resultContainer {
+            width: 80%;
+            height: 75%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px #706363;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+        }
+  /* other browsers */
+        #resultBoxContainer {
+            width: 90%;
+            height: 95%;
+            border-radius: 10px;
+            background-color: transparent;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 5px;
+            overflow-y: scroll;
+            scrollbar-width: thick;
+        }
+        #resultBoxContainer #FlightDetails_Container {
+            width: 60%;
+            height: 95%;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 10px;
+        }
+        #resultBoxContainer .FlightDetails_ContainerHeader{
+            width: 50%;
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #D9D9D9;
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px #474646;
+            border: 1px solid #524B4B;
+        }
+        #resultBoxContainer .FlightDetails_ContainerBody{
+            width: 99%;
+            height: 85%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #D9D9D9;
+            box-shadow: 1px 1px 5px #474646;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #524B4B;
+        }
+        #resultBoxContainer #FlightDetails_Container .FlightDetails_ContainerBody #Contianer_row1{
+            width: 99%;
+            height: 70%;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #resultBoxContainer #FlightDetails_Container .FlightDetails_ContainerBody #Contianer_row1 #Contianer_row1_col1{
+            width: 40%;
+            height: 99%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #Contianer_row1 #Contianer_row1_col1 #Img_Container{
+            width: 80%;
+            height: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        } 
+        #Contianer_row1 #Contianer_row1_col1 #Img_Container img{
+            width: 100%;
+            height: 100%;
+        }
+        #Contianer_row1_col2 {
+            width: 60%;
+            height: 99%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            row-gap: 10px;
+
+        }
+        #Contianer_row1_col2 #Airline_Company_Container {
+            width: 90%;
+            height: 10%;
+            background-color: #816969;
+            box-shadow: 1px 1px 5px #816969;
+            border-radius: 10px;
+        }
+        #Contianer_row1_col2 #Airline_Company_Container label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 99%;
+            height: 95%;
+            font-size: 18pt;
+            color: white;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #Contianer_row1_col2 #White_Box_Container{
+            width: 90%;
+            height: 80%;
+            background-color: white;
+            box-shadow: 1px 1px 5px #aaa6a6;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            box-shadow: 1px 1px 5px #816969;
+            row-gap: 5px;
+        }
+        .row1_col2_div_style {
+            width: 90%;
+            height: 8%;
+            display: flex;
+            border-radius: 10px;
+            padding-left: 5%;
+        }
+        #Contianer_row1_col2 #Seats_Container {
+            width: 90%;
+            height: 15%;
+            display: flex;
+            border-radius: 10px;
+            padding-left: 5%;
+            align-items: flex-end;
+        }
+        #Contianer_row1_col2 #Seats_Container input{
+            width: 40%;
+            height: 60%;
+            font-size: 10pt;
+            font-weight: normal;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 3px;
+            text-align: center;
+            outline: none;
+            border: none;
+            box-shadow: 1px 1px 5px #524B4B;
+        }
+        #Contianer_row1_col2 #Expected_Duration_Container {
+            width: 90%;
+            height: 10%;
+        }
+        #Contianer_row1_col2 #Buy_Ticket_Container {
+            width: 95%;
+            height: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            column-gap: 10px;
+        }
+        #Buy_Ticket_Btn {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            border: none;
+            font-size: 13pt;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #524B4B;
+            color: white;
+            
+        }
+        #Buy_Ticket_Btn:hover {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            border: none;
+            font-size: 14pt;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #524B4B;
+            color: white;
+            cursor: grab;
+        }
+        #Contianer_row1_col2 .box_Container_style{
+            width: 40%;
+            height: 80%;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            box-shadow: 1px 1px 5px #837E7E;
+        }
+        #PriceTag_Result {
+            width: 70%;
+            height:100%;
+            border-radius: 5px 0px 0px 5px;
+            font-size: 16pt;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #AEA3A3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        #approx_price {
+            width: 30%;
+            height:100%; 
+            border-radius: 0px 5px 5px 0px;
+            font-size: 16pt;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #EF4747;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        #Contianer_row1_col2 .row1_col2_div_span_bold_style {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 99%;
+            width: 100px;
+            font-size: 11pt;
+            font-weight: bold;
+            align-items: flex-end;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #Contianer_row1_col2 .row1_col2_div_style .row1_col2_div_label_normal_style {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            height: 99%;
+            width: 70%;
+            font-size: 11pt;
+            font-weight: normal;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #resultBoxContainer #FlightDetails_Container .FlightDetails_ContainerBody #Contianer_row2{
+            width: 99%;
+            height: 30%;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #resultBoxContainer #FlightDetails_Container .FlightDetails_ContainerBody #Contianer_row2 span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 60%;
+            max-width: 70%;
+            height: 40%;
+            background-color: #EF4747;
+            border-radius: 10px;
+            color: white;
+            font-size: 20pt;
+            box-shadow: 1px 1px 5px #EF4747;
+        }
+        #resultBoxContainer #AccountDetails_Container{
+            width: 36%;
+            height: 95%;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 10px;
+        }
+        #AccountDetails_Container #ContentContainer {
+            width: 70%;
+            height: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 10%;
+        }
+        #AccountDetails_Container #ContentContainer span{
+            width: 90%;
+            height: 5%;
+            font-size: 10pt;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 15px;
+        }
+        #AccountDetails_Container #ContentContainer input{
+            width: 90%;
+            height: 8%;
+            font-size: 9pt;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            box-shadow: 1px 1px 5px #474646;
+            color: #9F9797;
+            text-align: center;
+        }
+        #AccountDetails_Container #ContentContainer a{
+            width: 40%;
+            height: 10%;
+            background-color: #524B4B;
+            box-shadow: 1px 1px 5px #474646;
+            color: white;
+            font-size: 12pt;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10%;
+            transition: all 0.2s;
+        }
+        #AccountDetails_Container #ContentContainer a:hover {
+            width: 45%;
+            font-size: 13pt;
+        }
+
+        .fontStyle1 {
+            color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="">
+        <div id="MainContainer">
+            <!-- ##################### Navigation Details #####################-->
+            <div id="navigationBar">
+                <div id="dashboardContainer" class="navigationBarStyle"><a href="DashBoard.html"><img src="/icons/dashboard.png" alt="">Dashboard</a></div>
+                <div id="searchflightContainer" class="navigationBarStyle"><a href="SearchFlight.html"><img src="/icons/flight.png" alt="">Search Flight</a></div>
+                <div id="ticketsContainer" class="navigationBarStyle"><a href="FlightTickets.html"><img src="/icons/ticket.png" alt="">Flight Tickets</a></div>
+                <div id="trackflightContainer" class="navigationBarStyle"><a href="trackflightPage.html"><img src="/icons/track.png" alt="">Track FLight</a></div>
+                <div id="profileContainer" class="navigationBarStyle"><a href="profilePages/userDetails.html"><img src="/icons/user.png" alt="">Profile</a></div>
+            </div>
+            <!-- ##################### Main Content Container #####################-->
+            <div id="contentbar">
+                <div id="inputContainer">
+                    <div id="row1">
+                        <div id="insideRowCol1" class="colStyle">
+                            <div id="originInputContainer" class="inputContainerStyle1">
+                                <span>Origin:</span>
+                                <div id="originInputBoxContainer" class="inputBoxContainerStyle"><input type="text" name="" id="originInput" placeholder="Enter your Origin ... "></div>
+                            </div>
+                            <div id="dateInputContainer" class="inputContainerStyle1">
+                                <span>Date:</span>
+                                <div id="dateInputBoxContainer" class="inputBoxContainerStyle"><input type="text" name="" id="dateInput" placeholder="Enter Departure Date ... "></div>
+                            </div>
+                        </div>
+                        <div id="insideRowCol2" class="colStyle">
+                            <div id="destInputContainer" class="inputContainerStyle1">
+                                <span>Destination:</span>
+                                <div id="destInputBoxContainer" class="inputBoxContainerStyle"><input type="text" name="" id="destInput" placeholder="Enter your Destination ... "></div>
+                            </div>
+                            <div id="returnDateContainer" class="inputContainerStyle1">
+                                <span style="width: 35%;">Return Date:</span>
+                                <div id="returndateInputBoxContainer" class="inputBoxContainerStyle"><input type="text" name="" id="returndateInput" placeholder="Enter Return Date ... "></div>
+                            </div>
+                        </div>
+                        <div id="insideRowCol3" class="colStyle" style="align-items: flex-start;">
+                            <div id="destInputContainer" class="inputContainerStyle1" style="width: 50%;">
+                                <span>Seats:</span>
+                                <div id="seatsInputBoxContainer" class="inputBoxContainerStyle"><input type="text" name="" id="seatsInput" placeholder="No of Seats ... "></div>
+                            </div>
+                            <div id="flightTypeContainer" class="inputContainerStyle1">
+                                <span style="width: 35%;">Flight type:</span>
+                                <div id="flightTypeInputBoxContainer" class="inputBoxContainerStyle">
+                                    <select name="cars" id="flightTypeDropDown" class="dropDownStyle">
+                                        <option value="volvo">One Way</option>
+                                        <option value="saab">Round Trip</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="row2">
+                        <button type="button">Search Flights</button>
+                    </div>
+                </div>
+                <div id="resultContainer">
+                    <div id="resultBoxContainer">
+                        <div id="FlightDetails_Container">
+                            <div class="FlightDetails_ContainerHeader">
+                                <span class="fontStyle1">Flight Deatils</span>
+                            </div>
+                            <div class="FlightDetails_ContainerBody">
+                                <div id="Contianer_row1">
+                                    <div id="Contianer_row1_col1">
+                                        <div id="Img_Container">
+                                            <img src="/icons/airline2.svg" alt="" id="Airline_Company_Image">
+                                        </div>
+                                        
+                                    </div>
+                                    <div id="Contianer_row1_col2">
+                                        <div id="Airline_Company_Container">
+                                            <label for="" id="Airline_Comapany_Name_Result">MultiAirlines</label>
+                                        </div>
+                                        <div id="White_Box_Container">
+                                            <div id="Origin_Container" class="row1_col2_div_style">
+                                                <span class="row1_col2_div_span_bold_style">Origin: </span>
+                                                <label for="" id="Airline_Origin_Result" class="row1_col2_div_label_normal_style"> Karachi , KHI</label>
+                                            </div>
+                                            <div id="Org_Date_Container" class="row1_col2_div_style">
+                                                <span class="row1_col2_div_span_bold_style">Date: </span>
+                                                <label for="" id="Airline_Origin_Date_Result" class="row1_col2_div_label_normal_style">20 May 2023 12:00PM</label>
+                                            </div>
+                                            <div id="Destination_Container" class="row1_col2_div_style">
+                                                <span class="row1_col2_div_span_bold_style">Destination: </span>
+                                                <label for="" id="Airline_Destination_Result" class="row1_col2_div_label_normal_style">Lahore , LHR</label>
+                                            </div>
+                                            <div id="Dest_Date_Container" class="row1_col2_div_style">
+                                                <span class="row1_col2_div_span_bold_style">Date: </span>
+                                                <label for="" id="Airline_Origin_Date_Result" class="row1_col2_div_label_normal_style"> 20 May 2023 12:00PM</label>
+                                            </div>
+                                            <div id="Seats_Container">
+                                                <span class="row1_col2_div_span_bold_style">Seats: </span>
+                                                <input type="text" id="Airline_Seats_Input" placeholder="Enter Number Of Seats ...">
+                                            </div>
+                                            <div id="Expected_Duration_Container">
+                                                <span class="row1_col2_div_span_bold_style" style="width:99%;display:flex;justify-content:center;color:#EF4747;">Expected To Depart In <label for="" id="Airline_Duration_Result">7 Hours 45 mins</label> </span>
+                                            </div>
+                                            <div id="Buy_Ticket_Container">
+                                                <div id="PriceContianer" class="box_Container_style">
+                                                    <label for="" id="PriceTag_Result">$5,420</label>
+                                                    <span id="approx_price">=/</span>
+                                                </div>
+                                                <div id="Buy_Container" class="box_Container_style">
+                                                    <button type="button" id="Buy_Ticket_Btn">Buy Ticket</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div id="Contianer_row2">
+                                    <span><label for="" id="Airline_Comapany_Name_Result">Jet Airblue .</label> International Airlines</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="AccountDetails_Container">
+                            <div class="FlightDetails_ContainerHeader">
+                                <span class="fontStyle1">Account Deatils</span>
+                            </div>
+                            <div class="FlightDetails_ContainerBody">
+                                <div id="ContentContainer">
+                                    <Span>Username:</Span>
+                                    <input type="text" id="Username_Input" value="HammadRafique029">
+                                    <Span>Email Address:</Span>
+                                    <input type="text" id="Email_Address_Input" value="HammadRafique029@gmail.com">
+                                    <Span>Account Number:</Span>
+                                    <input type="text" id="Account_Number_Input" value="3610************34">
+                                    <Span>Account Holder name</Span>
+                                    <input type="text" id="Holder_Name_Input"value="Hammad Rafique">
+                                    <a href="/profilePages/userDetails.html">Edit Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Reservation System</title>
+    <link rel="stylesheet" href="PagesDesigns1.css">
+
+    <style>
+        #contentBody {
+            background-image: url("/images/contentBackground.png");
+            image-resolution: 100%;
+            background-size: 100%;
+            background-position: 100%;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #flightDetailsContainer {
+            width: 70%;
+            height: 70%;
+            background-color: gray;
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255, 0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 10px;
+        }
+        #Temp1 {
+            width: 60%;
+            height: 10%;
+            background-color: #F15A5A;
+            border-radius: 10px;
+            margin: 20px 0px 40px 0px;
+            font-size: 22pt;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 2px 2px 10px #7a7777;
+        }
+
+        .containerStyle1 {
+            width: 60%;
+            height: 7%;
+            font-size: 15pt;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            column-gap: 18px;
+            align-items: center;
+        }
+        .containerStyle1 span {
+            width: 150px;
+            color: #605959;
+            font-weight: bold;
+        }
+        .containerStyle1 input {
+            width: 80%;
+            height: 80%;
+            border-radius: 5px;
+            font-size: 11pt;
+            outline: none;
+            border: none;
+            box-shadow: 1px 1px 5px black;
+            transition: all 0.2s;
+
+        }
+        .containerStyle1 input:hover {
+            border: 1px solid black ;
+        }
+
+        .containerStyle2{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        #searchFlightBtn {
+            width: 20%;
+            height: 7%;
+            border-radius: 5px;
+            margin-top: 20px ;
+            background-color: #F15A5A;
+            font-size: 15pt;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            box-shadow: 2px 2px 5px black;
+            outline: none;
+            border: none;
+            transition: all 0.2s;
+        }
+        #searchFlightBtn button{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            background-color: transparent;
+            font-size: 15pt;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            box-shadow: 2px 2px 10px #cfc8c8;
+            outline: none;
+            border: none;
+        }
+        #searchFlightBtn:hover {
+            width: 25%;
+            font-size: 17pt;
+            cursor: grab;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <div id="MainContainer">
+            <!-- ##################### Navigation Details #####################-->
+            <div id="navigationBar">
+                <div id="dashboardContainer" class="navigationBarStyle"><a href="DashBoard.html"><img src="/icons/dashboard.png" alt="">Dashboard</a></div>
+                <div id="searchflightContainer" class="navigationBarStyle"><a href="SearchFlight.html"><img src="/icons/flight.png" alt="">Search Flight</a></div>
+                <div id="ticketsContainer" class="navigationBarStyle"><a href="FlightTickets.html"><img src="/icons/ticket.png" alt="">Flight Tickets</a></div>
+                <div id="trackflightContainer" class="navigationBarStyle"><a href="trackflightPage.html"><img src="/icons/track.png" alt="">Track FLight</a></div>
+                <div id="profileContainer" class="navigationBarStyle"><a href="profilePages/userDetails.html"><img src="/icons/user.png" alt="">Profile</a></div>
+            </div>
+            <!-- ##################### Main Content Container #####################-->
+            <div id="contentbar">
+                <!-- ##################### Main Content Header #####################-->
+                <div id="Header">
+                    <div id="currentTask" class="headerDivStyle"><img src="/icons/flight.png" alt="">Search Flight</div>
+                    <div id="appName" class="headerDivStyle">SkyTrust</div>
+                    <div id="userDetails" class="headerDivStyle">
+                        <div id="userDeatail"><label for="" id="userNameDisplay">HammadRafique029</label></div>
+                        <div id="userImg"><a href=""><img src="/icons/profile.png" id="userProfileImg" alt=""></a></div>
+                    </div>
+                </div>
+                <!-- ##################### Main Content Body #####################-->
+                <div id="contentBody">
+                    <div id="flightDetailsContainer">
+                        <div id="Temp1">Search Flight</div>
+                        <div id="orginContainer" class="containerStyle1">
+                            <span>Origin:</span><input type="text" id="originInput" class="inputStyle1" placeholder="Enter your Origin ...">
+                        </div>
+                        <div id="destinationContainer" class="containerStyle1">
+                            <span>Destination:</span><input type="text" id="destinationInput" class="inputStyle1" placeholder="Enter your Destination ...">
+                        </div>
+                        <div id="flightTypeContainer" class="containerStyle1">
+                            <div id="flightType" style="width: 50%;" class="containerStyle2"><span style="width: 55%;">Flight Type:</span><input type="text" id="flightTypeInput" class="inputStyle1" style="width: 50%;" placeholder="Round Trip"></div>
+                            <div id="flightClass"  class="containerStyle2" style="column-gap: 10px;"><span>Flight Class:</span><input type="text" id="flightClassInput" class="inputStyle1"  style="width: 50%;" placeholder="Flight Class ..."></div>  
+                        </div>
+
+                        <div id="arrivalDateContainer" class="containerStyle1" style="justify-content: flex-start; column-gap: 0px;">
+                            <span>Arrival Date:</span><input type="text" id="dateInput" class="inputStyle1" style="width: 45%;"  placeholder="Departure Date ...">
+                        </div>
+                        <div id="returnDateContainer" class="containerStyle1" style="justify-content: flex-start; column-gap: 0px;">
+                            <span >Return Date:</span><input type="text" id="returnDateInput" class="inputStyle1" style="width: 45%;" placeholder="Return Date ...">
+                        </div>
+
+                        <div id="seatsContainer" class="containerStyle1">
+                            <span >Seats:</span><input type="text" id="seatsInput" class="inputStyle1" placeholder="Seats ...">
+                        </div>
+
+                        <a href="SearchFlightResult.html" id="searchFlightBtn"><button type="button" id="">Search Flight</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

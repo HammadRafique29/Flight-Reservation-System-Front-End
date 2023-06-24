@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="97cf91d5-456a-48fc-98f2-d963fd38d375" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BuyFlight_Ticket.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DashBoard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlightTickets.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PagesDesigns1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SearchFlight.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SearchFlightResult.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dateTime.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Aeroflot-Russian Airlines logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Aeroflot-Russian Airlines logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Air France logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Air France logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Alitalia logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Alitalia logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/British Airways logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/British Airways logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Emirates logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Emirates logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Ethiopian Airlines logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Ethiopian Airlines logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Etihad Airways logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Etihad Airways logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Gulf Air logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Gulf Air logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/JBU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/KLM logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/KLM logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Lufthansa logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Lufthansa logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Multiple Airlines logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Multiple Airlines logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Oman Air logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Oman Air logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Qatar Airways logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Qatar Airways logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Royal Jordanian logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Royal Jordanian logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Rwandair logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Rwandair logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Swiss International Air Lines logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Swiss International Air Lines logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Turkish Airlines logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Turkish Airlines logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Virgin Atlantic logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/Virgin Atlantic logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/airline.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/airline2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/barcode.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/dashboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/expiredTicket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/flight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/googe_map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/icons8-logout-30.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/icons8-logout-90.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/icons8-logout.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/map.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/plane.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/ticket-flight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/ticket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/ticketLayout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/track.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/wifi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/icons/youtube.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/contentBackground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/contentBackground2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profilePages/deleteAccountPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profilePages/profilePage_style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profilePages/userDetails.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profilePages/userPaymentPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profilePages/userSecurityPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tempData.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trackFlightPage_flightID.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trackflightPage.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2QbfEjtTk8jDAeIQtiwpAKC3vfw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="97cf91d5-456a-48fc-98f2-d963fd38d375" name="Changes" comment="" />
+      <created>1685627108028</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685627108028</updated>
+    </task>
+    <servers />
+  </component>
+</project>

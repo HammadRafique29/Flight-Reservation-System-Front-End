@@ -1,0 +1,299 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+form {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#MainContainer {
+    width: 100%;
+    height: 98%;
+    background-color: white;
+    display: flex;
+}
+
+
+/* ################################################################## */
+/*                  Navigation Style Details                          */
+/* ################################################################## */
+
+#MainContainer #navigationBar{
+    width: 10%;
+    height: 100%;
+    background-color: #D63B3B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#MainContainer  #navigationBar .navigationBarStyle {
+    width: 100%;
+    height: 8%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px 0px 0px 10px;
+    transition: all 0.2s;
+}
+#MainContainer  #navigationBar .navigationBarStyle:hover {
+    background-color: white;
+    box-shadow: 2px 2px 5px black;
+    font-size: 15pt;
+    font-weight: bold;
+}
+#MainContainer  #navigationBar .navigationBarStyle a {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+}
+#MainContainer  #navigationBar .navigationBarStyle img {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* ################################################################## */
+/*                  Content Header Details                            */
+/* ################################################################## */
+
+#contentbar{
+    width: 90%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+#contentbar #Header{
+    width: 80%;
+    height: 12%;
+    background-color: #D63B3B;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#Header .headerDivStyle{
+    width: 20%;
+    height: 75%;
+    background-color: transparent;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 15pt;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+#Header #currentTask:hover{
+    font-size: 18pt;
+    cursor: grab;
+}
+#Header .headerDivStyle img{
+    width: 50px;
+    height: 60%; 
+    transition: all 0.2s;
+}
+#Header .headerDivStyle img:hover{
+    width: 60px;
+    height: 62%; 
+}
+#Header #appName {
+    box-shadow: 2px 2px 8px black;
+    font-size: 25pt;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #452E2E;
+    transition: all 0.3s;
+}
+#Header #appName:hover {
+    width: 25%;
+    font-size: 30pt;
+    cursor: default;
+    cursor: grab;
+}
+#Header #userDetails {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#Header #userDetails #userDeatail {
+    width: 65%;
+    height: 40%;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 10pt;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: all 0.2s;
+    cursor: pointer;
+    /* background-color: rgb(69, 46, 46); */
+    /* color: white; */
+}
+#Header #userDetails #userDeatail:hover {
+    width: 68%;
+    font-size: 11pt;
+}
+
+
+/* ################################################################## */
+/*                    Content Body Details                            */
+/* ################################################################## */
+
+#contentbar #contentBody{
+    width: 85%;
+    height: 82%;
+    background-color: white;
+    border-radius: 10px; 
+}
+
+
+
+
+/* ################################################################## */
+/*                      Content Font Styles                           */
+/* ################################################################## */
+.fontStyle1{
+    font-size: 15pt;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+    color: white;
+}
+.fontStyle2{
+    width: 130px;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contentBody #ContentContainer #container_AirportSearch #leftSide_content #leftSide_row1{
+    width: 99%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+}
+#contentBody #ContentContainer #container_AirportSearch #leftSide_content #leftSide_row1 #leftSide_row1_row1{
+    width: 99%;
+    height:65%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+#contentBody #ContentContainer #container_AirportSearch #leftSide_content #leftSide_row1 #leftSide_row1_row1 #leftSide_row1_row1_col1{
+    width: 20%;
+    height: 85%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#contentBody #ContentContainer #container_AirportSearch #leftSide_content #leftSide_row1 #leftSide_row1_row1 #leftSide_row1_row1_col1 img{
+    width: 80%;
+    height: 80%;
+    
+}
+#contentBody #ContentContainer #container_AirportSearch #leftSide_content #leftSide_row1 #leftSide_row1_row1 #leftSide_row1_row1_col2{
+    width: 40%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#contentBody #ContentContainer #container_AirportSearch #leftSide_content #leftSide_row1 #leftSide_row1_row1 #leftSide_row1_row1_col3{
+    width: 40%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contentBody #ContentContainer #container_AirportSearch #leftSide_content #leftSide_row1 #leftSide_row1_row1 .Flight_head_data_Style {
+    width: 99%;
+    height: 30%;
+}
+#contentBody #ContentContainer #container_AirportSearch #leftSide_content #leftSide_row1 #leftSide_row1_row1 .Flight_head_data_Style2 {
+    width: 99%;
+    height: 20%;
+}
+.Flight_head_data_Style2 label {
+    width: 90%;
+    height: 99%;
+    font-size: 12pt;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+}
+#flight_Airline_Name {
+    width: 90%;
+    height: 99%;
+    font-size: 15pt;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: flex-end;
+}
+#contentBody #ContentContainer #container_AirportSearch #leftSide_content #leftSide_row1 #leftSide_row1_row2{
+    width: 99%;
+    height: 25%;
+}
+#contentBody #ContentContainer #container_AirportSearch #leftSide_content #leftSide_row1 #leftSide_row1_row2 span{
+    width: 99%;
+    height: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: red;
+    font-weight: bold;
+    transition: all 0.01s;
+}
+#leftSide_row1_row2_span {
+    transition: all 0.2s;
+}
